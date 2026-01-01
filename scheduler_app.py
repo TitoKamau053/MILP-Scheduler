@@ -10,7 +10,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Professional, Minimal CSS (Updated to be Dark Mode Compatible)
 st.markdown("""
     <style>
     /* Remove white background constraint */
@@ -55,10 +54,10 @@ def load_data():
 
 rooms_db, days_db, hours_db, df_events = load_data()
 
-# --- SIDEBAR ---
+#  SIDEBAR 
 st.sidebar.title("Configuration")
 st.sidebar.caption("School of Pure & Applied Sciences")
-st.sidebar.markdown("---")
+st.sidebar.markdown("")
 st.sidebar.metric("Total Sessions", len(df_events))
 
 if st.sidebar.button("Generate Schedule"):
@@ -149,7 +148,7 @@ if st.sidebar.button("Generate Schedule"):
         else:
             st.error("Infeasible. Constraints too tight.")
 
-# --- MAIN DASHBOARD ---
+#  MAIN DASHBOARD 
 if 'schedule_data' in st.session_state:
     df_out = st.session_state['schedule_data']
     
