@@ -1,0 +1,289 @@
+EventID,CourseCode,CourseTitle,Group,Lecturer,LecturerStatus,Size,Dept,SessionType,Duration
+ECD 224_Phys,ECD 224,Unit 124 ECD Topic,BSc CS Y1,Dr. David Kaimenyi,Part-Time,50,SPAS,Physical,2
+ECD 224_Onl,ECD 224,Unit 124 ECD Topic,BSc CS Y1,Dr. David Kaimenyi,Part-Time,1000,SPAS,Online,1
+SMA 202_Phys,SMA 202,Unit 102 SMA Topic,BSc Env Y1,Mr. Jackson Kamiri,Part-Time,80,SPAS,Physical,2
+SMA 202_Onl,SMA 202,Unit 102 SMA Topic,BSc Env Y1,Mr. Jackson Kamiri,Part-Time,1000,SPAS,Online,1
+SIT 123_Phys,SIT 123,Unit 23 SIT Topic,BSc CS Y3,Dr. Jimrise Ochwach,Part-Time,80,SPAS,Physical,2
+SIT 123_Onl,SIT 123,Unit 23 SIT Topic,BSc CS Y3,Dr. Jimrise Ochwach,Part-Time,1000,SPAS,Online,1
+UCU 208_Phys,UCU 208,Unit 108 UCU Topic,BIT Y4,Ms. Esther Wambui,Part-Time,100,SPAS,Physical,2
+UCU 208_Onl,UCU 208,Unit 108 UCU Topic,BIT Y4,Ms. Esther Wambui,Part-Time,1000,SPAS,Online,1
+SST 101_Phys,SST 101,Unit 1 SST Topic,BSc Math Y2,Dr. Abraham Matheka,Part-Time,60,SPAS,Physical,2
+SST 101_Onl,SST 101,Unit 1 SST Topic,BSc Math Y2,Dr. Abraham Matheka,Part-Time,1000,SPAS,Online,1
+SST 141_Phys,SST 141,Unit 41 SST Topic,BSc Math Y2,Dr. Collins Oduor,Part-Time,60,SPAS,Physical,2
+SST 141_Onl,SST 141,Unit 41 SST Topic,BSc Math Y2,Dr. Collins Oduor,Part-Time,1000,SPAS,Online,1
+UCU 173_Phys,UCU 173,Unit 73 UCU Topic,BSc CS Y4,Dr Benjamin Kinyili,Part-Time,80,SPAS,Physical,2
+UCU 173_Onl,UCU 173,Unit 73 UCU Topic,BSc CS Y4,Dr Benjamin Kinyili,Part-Time,1000,SPAS,Online,1
+SIT 135_Phys,SIT 135,Unit 35 SIT Topic,BSc Env Y1,Dr. Jimrise Ochwach,Part-Time,60,SPAS,Physical,2
+SIT 135_Onl,SIT 135,Unit 35 SIT Topic,BSc Env Y1,Dr. Jimrise Ochwach,Part-Time,1000,SPAS,Online,1
+HTM 124_Phys,HTM 124,Unit 24 HTM Topic,BIT Y4,Mr. Harun Kamau,Part-Time,50,SPAS,Physical,2
+HTM 124_Onl,HTM 124,Unit 24 HTM Topic,BIT Y4,Mr. Harun Kamau,Part-Time,1000,SPAS,Online,1
+SMA 175_Phys,SMA 175,Unit 75 SMA Topic,BIT Y1,Dr. Keziah Gakahu,Part-Time,80,SPAS,Physical,2
+SMA 175_Onl,SMA 175,Unit 75 SMA Topic,BIT Y1,Dr. Keziah Gakahu,Part-Time,1000,SPAS,Online,1
+SCO 242_Phys,SCO 242,Unit 142 SCO Topic,BSc Hosp Y1,Mr. Gordon Agutu,Part-Time,80,SPAS,Physical,2
+SCO 242_Onl,SCO 242,Unit 142 SCO Topic,BSc Hosp Y1,Mr. Gordon Agutu,Part-Time,1000,SPAS,Online,1
+SMA 187_Phys,SMA 187,Unit 87 SMA Topic,BIT Y1,Dr. David Kaimenyi,Part-Time,100,SPAS,Physical,2
+SMA 187_Onl,SMA 187,Unit 87 SMA Topic,BIT Y1,Dr. David Kaimenyi,Part-Time,1000,SPAS,Online,1
+HSC 211_Phys,HSC 211,Unit 111 HSC Topic,BIT Y2,Dr. Abraham Matheka,Part-Time,80,SPAS,Physical,2
+HSC 211_Onl,HSC 211,Unit 111 HSC Topic,BIT Y2,Dr. Abraham Matheka,Part-Time,1000,SPAS,Online,1
+SCO 129_Phys,SCO 129,Unit 29 SCO Topic,BIT Y2,Mr. Joshua Mueke,Part-Time,50,SPAS,Physical,2
+SCO 129_Onl,SCO 129,Unit 29 SCO Topic,BIT Y2,Mr. Joshua Mueke,Part-Time,1000,SPAS,Online,1
+SCO 106_Phys,SCO 106,Unit 6 SCO Topic,BSc Env Y1,Mr. Gogo Otieno Kevin,Part-Time,60,SPAS,Physical,2
+SCO 106_Onl,SCO 106,Unit 6 SCO Topic,BSc Env Y1,Mr. Gogo Otieno Kevin,Part-Time,1000,SPAS,Online,1
+UCU 199_Phys,UCU 199,Unit 99 UCU Topic,BSc CS Y1,Dr. Kipkosigei Bitok,Part-Time,80,SPAS,Physical,2
+UCU 199_Onl,UCU 199,Unit 99 UCU Topic,BSc CS Y1,Dr. Kipkosigei Bitok,Part-Time,1000,SPAS,Online,1
+SIT 169_Phys,SIT 169,Unit 69 SIT Topic,BIT Y1,Mr. Jackson Kamiri,Part-Time,50,SPAS,Physical,2
+SIT 169_Onl,SIT 169,Unit 69 SIT Topic,BIT Y1,Mr. Jackson Kamiri,Part-Time,1000,SPAS,Online,1
+ECD 122_Phys,ECD 122,Unit 22 ECD Topic,BIT Y4,Dr. John Achola,Part-Time,100,SPAS,Physical,2
+ECD 122_Onl,ECD 122,Unit 22 ECD Topic,BIT Y4,Dr. John Achola,Part-Time,1000,SPAS,Online,1
+SST 118_Phys,SST 118,Unit 18 SST Topic,BSc Hosp Y1,Dr. Peter Murage,Part-Time,100,SPAS,Physical,2
+SST 118_Onl,SST 118,Unit 18 SST Topic,BSc Hosp Y1,Dr. Peter Murage,Part-Time,1000,SPAS,Online,1
+ECD 126_Phys,ECD 126,Unit 26 ECD Topic,BSc Math Y1,Dr Benjamin Kinyili,Part-Time,60,SPAS,Physical,2
+ECD 126_Onl,ECD 126,Unit 26 ECD Topic,BSc Math Y1,Dr Benjamin Kinyili,Part-Time,1000,SPAS,Online,1
+ECD 171_Phys,ECD 171,Unit 71 ECD Topic,BSc CS Y4,Dr. Sylivia Mukenyia,Part-Time,50,SPAS,Physical,2
+ECD 171_Onl,ECD 171,Unit 71 ECD Topic,BSc CS Y4,Dr. Sylivia Mukenyia,Part-Time,1000,SPAS,Online,1
+HSC 183_Phys,HSC 183,Unit 83 HSC Topic,BIT Y1,Dr. John Kung'u,Part-Time,100,SPAS,Physical,2
+HSC 183_Onl,HSC 183,Unit 83 HSC Topic,BIT Y1,Dr. John Kung'u,Part-Time,1000,SPAS,Online,1
+UCU 154_Phys,UCU 154,Unit 54 UCU Topic,BSc CS Y2,Dr. Joab Onyango,Part-Time,80,SPAS,Physical,2
+UCU 154_Onl,UCU 154,Unit 54 UCU Topic,BSc CS Y2,Dr. Joab Onyango,Part-Time,1000,SPAS,Online,1
+SCO 146_Phys,SCO 146,Unit 46 SCO Topic,BIT Y1,Dr. Catherine Mukunga,Part-Time,60,SPAS,Physical,2
+SCO 146_Onl,SCO 146,Unit 46 SCO Topic,BIT Y1,Dr. Catherine Mukunga,Part-Time,1000,SPAS,Online,1
+UCU 142_Phys,UCU 142,Unit 42 UCU Topic,BIT Y3,Dr. Keziah Gakahu,Part-Time,80,SPAS,Physical,2
+UCU 142_Onl,UCU 142,Unit 42 UCU Topic,BIT Y3,Dr. Keziah Gakahu,Part-Time,1000,SPAS,Online,1
+UCU 165_Phys,UCU 165,Unit 65 UCU Topic,BIT Y2,Dr. Vincent Maranga,Part-Time,100,SPAS,Physical,2
+UCU 165_Onl,UCU 165,Unit 65 UCU Topic,BIT Y2,Dr. Vincent Maranga,Part-Time,1000,SPAS,Online,1
+ECD 228_Phys,ECD 228,Unit 128 ECD Topic,BSc CS Y4,Dr. Albert Kariuki,Part-Time,100,SPAS,Physical,2
+ECD 228_Onl,ECD 228,Unit 128 ECD Topic,BSc CS Y4,Dr. Albert Kariuki,Part-Time,1000,SPAS,Online,1
+SIT 222_Phys,SIT 222,Unit 122 SIT Topic,BSc CS Y4,Ms. Norah Njoki,Part-Time,50,SPAS,Physical,2
+SIT 222_Onl,SIT 222,Unit 122 SIT Topic,BSc CS Y4,Ms. Norah Njoki,Part-Time,1000,SPAS,Online,1
+ECD 243_Phys,ECD 243,Unit 143 ECD Topic,BIT Y4,Mr. Joshua Mueke,Part-Time,60,SPAS,Physical,2
+ECD 243_Onl,ECD 243,Unit 143 ECD Topic,BIT Y4,Mr. Joshua Mueke,Part-Time,1000,SPAS,Online,1
+ECD 209_Phys,ECD 209,Unit 109 ECD Topic,BSc CS Y3,Dr. Joab Onyango,Part-Time,100,SPAS,Physical,2
+ECD 209_Onl,ECD 209,Unit 109 ECD Topic,BSc CS Y3,Dr. Joab Onyango,Part-Time,1000,SPAS,Online,1
+HSC 147_Phys,HSC 147,Unit 47 HSC Topic,BSc CS Y3,Dr. Collins Oduor,Part-Time,50,SPAS,Physical,2
+HSC 147_Onl,HSC 147,Unit 47 HSC Topic,BSc CS Y3,Dr. Collins Oduor,Part-Time,1000,SPAS,Online,1
+HSC 164_Phys,HSC 164,Unit 64 HSC Topic,BIT Y3,Mr. Joshua Mueke,Full-Time,60,SPAS,Physical,2
+HSC 164_Onl,HSC 164,Unit 64 HSC Topic,BIT Y3,Mr. Joshua Mueke,Full-Time,1000,SPAS,Online,1
+UCU 117_Phys,UCU 117,Unit 17 UCU Topic,BIT Y2,Dr Benjamin Kinyili,Full-Time,60,SPAS,Physical,2
+UCU 117_Onl,UCU 117,Unit 17 UCU Topic,BIT Y2,Dr Benjamin Kinyili,Full-Time,1000,SPAS,Online,1
+SMA 127_Phys,SMA 127,Unit 27 SMA Topic,BIT Y4,Dr. Kipkosigei Bitok,Part-Time,50,SPAS,Physical,2
+SMA 127_Onl,SMA 127,Unit 27 SMA Topic,BIT Y4,Dr. Kipkosigei Bitok,Part-Time,1000,SPAS,Online,1
+HSC 152_Phys,HSC 152,Unit 52 HSC Topic,BSc CS Y3,Mr. John Kinyanjui,Part-Time,100,SPAS,Physical,2
+HSC 152_Onl,HSC 152,Unit 52 HSC Topic,BSc CS Y3,Mr. John Kinyanjui,Part-Time,1000,SPAS,Online,1
+HSC 220_Phys,HSC 220,Unit 120 HSC Topic,BIT Y2,Mr. Gogo Otieno Kevin,Part-Time,60,SPAS,Physical,2
+HSC 220_Onl,HSC 220,Unit 120 HSC Topic,BIT Y2,Mr. Gogo Otieno Kevin,Part-Time,1000,SPAS,Online,1
+SIT 240_Phys,SIT 240,Unit 140 SIT Topic,BSc Hosp Y1,Ms. Purity Mureithi,Part-Time,60,SPAS,Physical,2
+SIT 240_Onl,SIT 240,Unit 140 SIT Topic,BSc Hosp Y1,Ms. Purity Mureithi,Part-Time,1000,SPAS,Online,1
+UCU 107_Phys,UCU 107,Unit 7 UCU Topic,BIT Y4,Dr. Keziah Gakahu,Full-Time,100,SPAS,Physical,2
+UCU 107_Onl,UCU 107,Unit 7 UCU Topic,BIT Y4,Dr. Keziah Gakahu,Full-Time,1000,SPAS,Online,1
+SIT 112_Phys,SIT 112,Unit 12 SIT Topic,BIT Y2,Dr. Ephantus Mwangi,Part-Time,80,SPAS,Physical,2
+SIT 112_Onl,SIT 112,Unit 12 SIT Topic,BIT Y2,Dr. Ephantus Mwangi,Part-Time,1000,SPAS,Online,1
+SIT 161_Phys,SIT 161,Unit 61 SIT Topic,BSc Hosp Y1,Mr. Joshua Mueke,Full-Time,80,SPAS,Physical,2
+SIT 161_Onl,SIT 161,Unit 61 SIT Topic,BSc Hosp Y1,Mr. Joshua Mueke,Full-Time,1000,SPAS,Online,1
+ECD 210_Phys,ECD 210,Unit 110 ECD Topic,BSc CS Y4,Dr. Peter Mwangi,Part-Time,80,SPAS,Physical,2
+ECD 210_Onl,ECD 210,Unit 110 ECD Topic,BSc CS Y4,Dr. Peter Mwangi,Part-Time,1000,SPAS,Online,1
+HTM 231_Phys,HTM 231,Unit 131 HTM Topic,BSc Hosp Y1,Dr. Collins Oduor,Full-Time,100,SPAS,Physical,2
+HTM 231_Onl,HTM 231,Unit 131 HTM Topic,BSc Hosp Y1,Dr. Collins Oduor,Full-Time,1000,SPAS,Online,1
+SST 219_Phys,SST 219,Unit 119 SST Topic,BIT Y1,Mr. Gordon Agutu,Part-Time,80,SPAS,Physical,2
+SST 219_Onl,SST 219,Unit 119 SST Topic,BIT Y1,Mr. Gordon Agutu,Part-Time,1000,SPAS,Online,1
+SST 153_Phys,SST 153,Unit 53 SST Topic,BIT Y3,Dr. Sylivia Mukenyia,Part-Time,50,SPAS,Physical,2
+SST 153_Onl,SST 153,Unit 53 SST Topic,BIT Y3,Dr. Sylivia Mukenyia,Part-Time,1000,SPAS,Online,1
+ECD 151_Phys,ECD 151,Unit 51 ECD Topic,BSc CS Y3,Dr. Ruth Wambua,Part-Time,80,SPAS,Physical,2
+ECD 151_Onl,ECD 151,Unit 51 ECD Topic,BSc CS Y3,Dr. Ruth Wambua,Part-Time,1000,SPAS,Online,1
+HSC 193_Phys,HSC 193,Unit 93 HSC Topic,BSc CS Y2,Dr. Ruth Wambua,Part-Time,60,SPAS,Physical,2
+HSC 193_Onl,HSC 193,Unit 93 HSC Topic,BSc CS Y2,Dr. Ruth Wambua,Part-Time,1000,SPAS,Online,1
+SIT 128_Phys,SIT 128,Unit 28 SIT Topic,BSc CS Y2,Mr. Jackson Kamiri,Full-Time,100,SPAS,Physical,2
+SIT 128_Onl,SIT 128,Unit 28 SIT Topic,BSc CS Y2,Mr. Jackson Kamiri,Full-Time,1000,SPAS,Online,1
+SIT 181_Phys,SIT 181,Unit 81 SIT Topic,BSc CS Y2,Ms. Esther Wambui,Part-Time,100,SPAS,Physical,2
+SIT 181_Onl,SIT 181,Unit 81 SIT Topic,BSc CS Y2,Ms. Esther Wambui,Part-Time,1000,SPAS,Online,1
+ECD 241_Phys,ECD 241,Unit 141 ECD Topic,BIT Y2,Mr. Boniface Mwangi,Part-Time,50,SPAS,Physical,2
+ECD 241_Onl,ECD 241,Unit 141 ECD Topic,BIT Y2,Mr. Boniface Mwangi,Part-Time,1000,SPAS,Online,1
+ECD 221_Phys,ECD 221,Unit 121 ECD Topic,BSc CS Y1,Dr. Paul Mwangi,Part-Time,100,SPAS,Physical,2
+ECD 221_Onl,ECD 221,Unit 121 ECD Topic,BSc CS Y1,Dr. Paul Mwangi,Part-Time,1000,SPAS,Online,1
+UCU 102_Phys,UCU 102,Unit 2 UCU Topic,BIT Y2,Dr. Victor Aliata,Part-Time,60,SPAS,Physical,2
+UCU 102_Onl,UCU 102,Unit 2 UCU Topic,BIT Y2,Dr. Victor Aliata,Part-Time,1000,SPAS,Online,1
+HSC 213_Phys,HSC 213,Unit 113 HSC Topic,BIT Y1,Dr. David Kaimenyi,Full-Time,80,SPAS,Physical,2
+HSC 213_Onl,HSC 213,Unit 113 HSC Topic,BIT Y1,Dr. David Kaimenyi,Full-Time,1000,SPAS,Online,1
+HTM 159_Phys,HTM 159,Unit 59 HTM Topic,BSc Hosp Y1,Dr. John Achola,Part-Time,50,SPAS,Physical,2
+HTM 159_Onl,HTM 159,Unit 59 HTM Topic,BSc Hosp Y1,Dr. John Achola,Part-Time,1000,SPAS,Online,1
+SIT 113_Phys,SIT 113,Unit 13 SIT Topic,BSc Math Y2,Dr. Keziah Gakahu,Full-Time,60,SPAS,Physical,2
+SIT 113_Onl,SIT 113,Unit 13 SIT Topic,BSc Math Y2,Dr. Keziah Gakahu,Full-Time,1000,SPAS,Online,1
+SMA 188_Phys,SMA 188,Unit 88 SMA Topic,BSc Env Y1,Dr. Roy Kiogora,Part-Time,80,SPAS,Physical,2
+SMA 188_Onl,SMA 188,Unit 88 SMA Topic,BSc Env Y1,Dr. Roy Kiogora,Part-Time,1000,SPAS,Online,1
+SST 184_Phys,SST 184,Unit 84 SST Topic,BSc CS Y1,Ms. Dorothy Kathambi,Part-Time,60,SPAS,Physical,2
+SST 184_Onl,SST 184,Unit 84 SST Topic,BSc CS Y1,Ms. Dorothy Kathambi,Part-Time,1000,SPAS,Online,1
+SST 212_Phys,SST 212,Unit 112 SST Topic,BSc Hosp Y1,Mr. Gordon Agutu,Full-Time,80,SPAS,Physical,2
+SST 212_Onl,SST 212,Unit 112 SST Topic,BSc Hosp Y1,Mr. Gordon Agutu,Full-Time,1000,SPAS,Online,1
+UCU 179_Phys,UCU 179,Unit 79 UCU Topic,BSc CS Y1,Ms. Esther Wambui,Full-Time,100,SPAS,Physical,2
+UCU 179_Onl,UCU 179,Unit 79 UCU Topic,BSc CS Y1,Ms. Esther Wambui,Full-Time,1000,SPAS,Online,1
+HTM 229_Phys,HTM 229,Unit 129 HTM Topic,BIT Y1,Dr Benjamin Kinyili,Full-Time,80,SPAS,Physical,2
+HTM 229_Onl,HTM 229,Unit 129 HTM Topic,BIT Y1,Dr Benjamin Kinyili,Full-Time,1000,SPAS,Online,1
+SCO 174_Phys,SCO 174,Unit 74 SCO Topic,BSc CS Y3,Ms. Norah Njoki,Part-Time,100,SPAS,Physical,2
+SCO 174_Onl,SCO 174,Unit 74 SCO Topic,BSc CS Y3,Ms. Norah Njoki,Part-Time,1000,SPAS,Online,1
+ECD 131_Phys,ECD 131,Unit 31 ECD Topic,BSc Env Y1,Dr. Elijah Maseno,Part-Time,80,SPAS,Physical,2
+ECD 131_Onl,ECD 131,Unit 31 ECD Topic,BSc Env Y1,Dr. Elijah Maseno,Part-Time,1000,SPAS,Online,1
+HTM 233_Phys,HTM 233,Unit 133 HTM Topic,BIT Y4,Dr. Peter Murage,Part-Time,80,SPAS,Physical,2
+HTM 233_Onl,HTM 233,Unit 133 HTM Topic,BIT Y4,Dr. Peter Murage,Part-Time,1000,SPAS,Online,1
+HSC 216_Phys,HSC 216,Unit 116 HSC Topic,BSc Math Y2,Dr. Michael Murimi,Part-Time,80,SPAS,Physical,2
+HSC 216_Onl,HSC 216,Unit 116 HSC Topic,BSc Math Y2,Dr. Michael Murimi,Part-Time,1000,SPAS,Online,1
+SCO 203_Phys,SCO 203,Unit 103 SCO Topic,BIT Y1,Dr. Abraham Matheka,Full-Time,100,SPAS,Physical,2
+SCO 203_Onl,SCO 203,Unit 103 SCO Topic,BIT Y1,Dr. Abraham Matheka,Full-Time,1000,SPAS,Online,1
+SST 130_Phys,SST 130,Unit 30 SST Topic,BSc Math Y2,Dr. Julius Murumba,Part-Time,80,SPAS,Physical,2
+SST 130_Onl,SST 130,Unit 30 SST Topic,BSc Math Y2,Dr. Julius Murumba,Part-Time,1000,SPAS,Online,1
+SCO 119_Phys,SCO 119,Unit 19 SCO Topic,BSc CS Y1,Dr. David Kaimenyi,Full-Time,50,SPAS,Physical,2
+SCO 119_Onl,SCO 119,Unit 19 SCO Topic,BSc CS Y1,Dr. David Kaimenyi,Full-Time,1000,SPAS,Online,1
+ECD 225_Phys,ECD 225,Unit 125 ECD Topic,BSc CS Y2,Dr. Collins Oduor,Full-Time,50,SPAS,Physical,2
+ECD 225_Onl,ECD 225,Unit 125 ECD Topic,BSc CS Y2,Dr. Collins Oduor,Full-Time,1000,SPAS,Online,1
+SCO 207_Phys,SCO 207,Unit 107 SCO Topic,BSc Math Y2,Ms. Ann Adoyo,Part-Time,80,SPAS,Physical,2
+SCO 207_Onl,SCO 207,Unit 107 SCO Topic,BSc Math Y2,Ms. Ann Adoyo,Part-Time,1000,SPAS,Online,1
+SMA 150_Phys,SMA 150,Unit 50 SMA Topic,BIT Y3,Ms. Esther Wambui,Full-Time,100,SPAS,Physical,2
+SMA 150_Onl,SMA 150,Unit 50 SMA Topic,BIT Y3,Ms. Esther Wambui,Full-Time,1000,SPAS,Online,1
+UCU 227_Phys,UCU 227,Unit 127 UCU Topic,BSc Env Y1,Dr. Catherine Mukunga,Part-Time,100,SPAS,Physical,2
+UCU 227_Onl,UCU 227,Unit 127 UCU Topic,BSc Env Y1,Dr. Catherine Mukunga,Part-Time,1000,SPAS,Online,1
+HSC 104_Phys,HSC 104,Unit 4 HSC Topic,BIT Y4,Dr. Collins Oduor,Full-Time,80,SPAS,Physical,2
+HSC 104_Onl,HSC 104,Unit 4 HSC Topic,BIT Y4,Dr. Collins Oduor,Full-Time,1000,SPAS,Online,1
+UCU 166_Phys,UCU 166,Unit 66 UCU Topic,BSc CS Y1,Mr. Patrick Berengu,Part-Time,50,SPAS,Physical,2
+UCU 166_Onl,UCU 166,Unit 66 UCU Topic,BSc CS Y1,Mr. Patrick Berengu,Part-Time,1000,SPAS,Online,1
+SMA 190_Phys,SMA 190,Unit 90 SMA Topic,BSc Env Y1,Mr. Harun Kamau,Part-Time,80,SPAS,Physical,2
+SMA 190_Onl,SMA 190,Unit 90 SMA Topic,BSc Env Y1,Mr. Harun Kamau,Part-Time,1000,SPAS,Online,1
+UCU 145_Phys,UCU 145,Unit 45 UCU Topic,BSc Math Y1,Dr. Joab Onyango,Full-Time,80,SPAS,Physical,2
+UCU 145_Onl,UCU 145,Unit 45 UCU Topic,BSc Math Y1,Dr. Joab Onyango,Full-Time,1000,SPAS,Online,1
+SST 196_Phys,SST 196,Unit 96 SST Topic,BIT Y4,Dr. Jane Gachambi,Part-Time,100,SPAS,Physical,2
+SST 196_Onl,SST 196,Unit 96 SST Topic,BIT Y4,Dr. Jane Gachambi,Part-Time,1000,SPAS,Online,1
+SST 206_Phys,SST 206,Unit 106 SST Topic,BSc CS Y4,Dr. Collins Oduor,Full-Time,50,SPAS,Physical,2
+SST 206_Onl,SST 206,Unit 106 SST Topic,BSc CS Y4,Dr. Collins Oduor,Full-Time,1000,SPAS,Online,1
+HTM 140_Phys,HTM 140,Unit 40 HTM Topic,BSc CS Y1,Dr. Vincent Maranga,Part-Time,60,SPAS,Physical,2
+HTM 140_Onl,HTM 140,Unit 40 HTM Topic,BSc CS Y1,Dr. Vincent Maranga,Part-Time,1000,SPAS,Online,1
+SST 109_Phys,SST 109,Unit 9 SST Topic,BSc CS Y2,Mr. Harun Kamau,Full-Time,50,SPAS,Physical,2
+SST 109_Onl,SST 109,Unit 9 SST Topic,BSc CS Y2,Mr. Harun Kamau,Full-Time,1000,SPAS,Online,1
+UCU 168_Phys,UCU 168,Unit 68 UCU Topic,BIT Y3,Mr. Joshua Mueke,Full-Time,60,SPAS,Physical,2
+UCU 168_Onl,UCU 168,Unit 68 UCU Topic,BIT Y3,Mr. Joshua Mueke,Full-Time,1000,SPAS,Online,1
+SMA 177_Phys,SMA 177,Unit 77 SMA Topic,BIT Y4,Mr. Boniface Mwangi,Part-Time,80,SPAS,Physical,2
+SMA 177_Onl,SMA 177,Unit 77 SMA Topic,BIT Y4,Mr. Boniface Mwangi,Part-Time,1000,SPAS,Online,1
+HSC 132_Phys,HSC 132,Unit 32 HSC Topic,BSc Hosp Y1,Dr. Roy Kiogora,Part-Time,100,SPAS,Physical,2
+HSC 132_Onl,HSC 132,Unit 32 HSC Topic,BSc Hosp Y1,Dr. Roy Kiogora,Part-Time,1000,SPAS,Online,1
+HTM 200_Phys,HTM 200,Unit 100 HTM Topic,BSc Math Y1,Dr. Leonora Lutiali,Part-Time,80,SPAS,Physical,2
+HTM 200_Onl,HTM 200,Unit 100 HTM Topic,BSc Math Y1,Dr. Leonora Lutiali,Part-Time,1000,SPAS,Online,1
+SMA 105_Phys,SMA 105,Unit 5 SMA Topic,BSc CS Y2,Dr. Roy Kiogora,Full-Time,80,SPAS,Physical,2
+SMA 105_Onl,SMA 105,Unit 5 SMA Topic,BSc CS Y2,Dr. Roy Kiogora,Full-Time,1000,SPAS,Online,1
+ECD 134_Phys,ECD 134,Unit 34 ECD Topic,BSc CS Y3,Dr Benjamin Kinyili,Full-Time,100,SPAS,Physical,2
+ECD 134_Onl,ECD 134,Unit 34 ECD Topic,BSc CS Y3,Dr Benjamin Kinyili,Full-Time,1000,SPAS,Online,1
+SIT 163_Phys,SIT 163,Unit 63 SIT Topic,BIT Y1,Dr. Vincent Maranga,Full-Time,50,SPAS,Physical,2
+SIT 163_Onl,SIT 163,Unit 63 SIT Topic,BIT Y1,Dr. Vincent Maranga,Full-Time,1000,SPAS,Online,1
+UCU 198_Phys,UCU 198,Unit 98 UCU Topic,BSc CS Y2,Dr. Abraham Matheka,Full-Time,100,SPAS,Physical,2
+UCU 198_Onl,UCU 198,Unit 98 UCU Topic,BSc CS Y2,Dr. Abraham Matheka,Full-Time,1000,SPAS,Online,1
+SMA 195_Phys,SMA 195,Unit 95 SMA Topic,BSc CS Y4,Dr. Ruth Wambua,Full-Time,60,SPAS,Physical,2
+SMA 195_Onl,SMA 195,Unit 95 SMA Topic,BSc CS Y4,Dr. Ruth Wambua,Full-Time,1000,SPAS,Online,1
+HTM 218_Phys,HTM 218,Unit 118 HTM Topic,BSc CS Y1,Dr. Albert Kariuki,Part-Time,100,SPAS,Physical,2
+HTM 218_Onl,HTM 218,Unit 118 HTM Topic,BSc CS Y1,Dr. Albert Kariuki,Part-Time,1000,SPAS,Online,1
+SST 103_Phys,SST 103,Unit 3 SST Topic,BSc CS Y1,Dr. Abraham Matheka,Full-Time,60,SPAS,Physical,2
+SST 103_Onl,SST 103,Unit 3 SST Topic,BSc CS Y1,Dr. Abraham Matheka,Full-Time,1000,SPAS,Online,1
+HTM 223_Phys,HTM 223,Unit 123 HTM Topic,BSc CS Y3,Ms. Dorothy Kathambi,Part-Time,100,SPAS,Physical,2
+HTM 223_Onl,HTM 223,Unit 123 HTM Topic,BSc CS Y3,Ms. Dorothy Kathambi,Part-Time,1000,SPAS,Online,1
+SIT 160_Phys,SIT 160,Unit 60 SIT Topic,BSc CS Y4,Mr. Boniface Mwangi,Full-Time,100,SPAS,Physical,2
+SIT 160_Onl,SIT 160,Unit 60 SIT Topic,BSc CS Y4,Mr. Boniface Mwangi,Full-Time,1000,SPAS,Online,1
+HTM 176_Phys,HTM 176,Unit 76 HTM Topic,BSc Env Y1,Mr. Joshua Mueke,Full-Time,60,SPAS,Physical,2
+HTM 176_Onl,HTM 176,Unit 76 HTM Topic,BSc Env Y1,Mr. Joshua Mueke,Full-Time,1000,SPAS,Online,1
+SCO 214_Phys,SCO 214,Unit 114 SCO Topic,BIT Y4,Mr. Gordon Agutu,Full-Time,50,SPAS,Physical,2
+SCO 214_Onl,SCO 214,Unit 114 SCO Topic,BIT Y4,Mr. Gordon Agutu,Full-Time,1000,SPAS,Online,1
+ECD 155_Phys,ECD 155,Unit 55 ECD Topic,BIT Y2,Ms. Norah Njoki,Full-Time,60,SPAS,Physical,2
+ECD 155_Onl,ECD 155,Unit 55 ECD Topic,BIT Y2,Ms. Norah Njoki,Full-Time,1000,SPAS,Online,1
+SMA 232_Phys,SMA 232,Unit 132 SMA Topic,BIT Y2,Ms. Esther Wambui,Full-Time,100,SPAS,Physical,2
+SMA 232_Onl,SMA 232,Unit 132 SMA Topic,BIT Y2,Ms. Esther Wambui,Full-Time,1000,SPAS,Online,1
+HSC 139_Phys,HSC 139,Unit 39 HSC Topic,BIT Y2,Ms. Norah Njoki,Full-Time,50,SPAS,Physical,2
+HSC 139_Onl,HSC 139,Unit 39 HSC Topic,BIT Y2,Ms. Norah Njoki,Full-Time,1000,SPAS,Online,1
+SST 158_Phys,SST 158,Unit 58 SST Topic,BSc CS Y3,Dr. Peter Muiruri,Part-Time,100,SPAS,Physical,2
+SST 158_Onl,SST 158,Unit 58 SST Topic,BSc CS Y3,Dr. Peter Muiruri,Part-Time,1000,SPAS,Online,1
+SCO 197_Phys,SCO 197,Unit 97 SCO Topic,BSc Hosp Y1,Mr. Dan Ojwang,Part-Time,100,SPAS,Physical,2
+SCO 197_Onl,SCO 197,Unit 97 SCO Topic,BSc Hosp Y1,Mr. Dan Ojwang,Part-Time,1000,SPAS,Online,1
+SIT 230_Phys,SIT 230,Unit 130 SIT Topic,BIT Y1,Dr. John Kung'u,Part-Time,60,SPAS,Physical,2
+SIT 230_Onl,SIT 230,Unit 130 SIT Topic,BIT Y1,Dr. John Kung'u,Part-Time,1000,SPAS,Online,1
+HSC 237_Phys,HSC 237,Unit 137 HSC Topic,BSc Math Y2,Mr. Dan Ojwang,Part-Time,60,SPAS,Physical,2
+HSC 237_Onl,HSC 237,Unit 137 HSC Topic,BSc Math Y2,Mr. Dan Ojwang,Part-Time,1000,SPAS,Online,1
+ECD 192_Phys,ECD 192,Unit 92 ECD Topic,BSc CS Y3,Mr. Dan Ojwang,Full-Time,80,SPAS,Physical,2
+ECD 192_Onl,ECD 192,Unit 92 ECD Topic,BSc CS Y3,Mr. Dan Ojwang,Full-Time,1000,SPAS,Online,1
+ECD 111_Phys,ECD 111,Unit 11 ECD Topic,BIT Y4,Dr. Sylivia Mukenyia,Full-Time,100,SPAS,Physical,2
+ECD 111_Onl,ECD 111,Unit 11 ECD Topic,BIT Y4,Dr. Sylivia Mukenyia,Full-Time,1000,SPAS,Online,1
+UCU 234_Phys,UCU 234,Unit 134 UCU Topic,BSc Math Y1,Dr. Kipkosigei Bitok,Full-Time,100,SPAS,Physical,2
+UCU 234_Onl,UCU 234,Unit 134 UCU Topic,BSc Math Y1,Dr. Kipkosigei Bitok,Full-Time,1000,SPAS,Online,1
+ECD 186_Phys,ECD 186,Unit 86 ECD Topic,BIT Y2,Dr. Ephantus Mwangi,Part-Time,100,SPAS,Physical,2
+ECD 186_Onl,ECD 186,Unit 86 ECD Topic,BIT Y2,Dr. Ephantus Mwangi,Part-Time,1000,SPAS,Online,1
+ECD 226_Phys,ECD 226,Unit 126 ECD Topic,BSc Hosp Y1,Dr. Ann Rintari,Part-Time,100,SPAS,Physical,2
+ECD 226_Onl,ECD 226,Unit 126 ECD Topic,BSc Hosp Y1,Dr. Ann Rintari,Part-Time,1000,SPAS,Online,1
+ECD 114_Phys,ECD 114,Unit 14 ECD Topic,BSc Hosp Y1,Dr. Kipkosigei Bitok,Full-Time,50,SPAS,Physical,2
+ECD 114_Onl,ECD 114,Unit 14 ECD Topic,BSc Hosp Y1,Dr. Kipkosigei Bitok,Full-Time,1000,SPAS,Online,1
+SCO 136_Phys,SCO 136,Unit 36 SCO Topic,BSc Env Y1,Dr. Peter Murage,Full-Time,60,SPAS,Physical,2
+SCO 136_Onl,SCO 136,Unit 36 SCO Topic,BSc Env Y1,Dr. Peter Murage,Full-Time,1000,SPAS,Online,1
+SST 235_Phys,SST 235,Unit 135 SST Topic,BSc Hosp Y1,Ms. Norah Njoki,Full-Time,100,SPAS,Physical,2
+SST 235_Onl,SST 235,Unit 135 SST Topic,BSc Hosp Y1,Ms. Norah Njoki,Full-Time,1000,SPAS,Online,1
+SST 244_Phys,SST 244,Unit 144 SST Topic,BSc Hosp Y1,Mr. Dan Ojwang,Full-Time,80,SPAS,Physical,2
+SST 244_Onl,SST 244,Unit 144 SST Topic,BSc Hosp Y1,Mr. Dan Ojwang,Full-Time,1000,SPAS,Online,1
+SMA 133_Phys,SMA 133,Unit 33 SMA Topic,BSc Env Y1,Mr. Gordon Agutu,Full-Time,50,SPAS,Physical,2
+SMA 133_Onl,SMA 133,Unit 33 SMA Topic,BSc Env Y1,Mr. Gordon Agutu,Full-Time,1000,SPAS,Online,1
+SIT 116_Phys,SIT 116,Unit 16 SIT Topic,BSc CS Y4,Ms. Dorothy Kathambi,Full-Time,100,SPAS,Physical,2
+SIT 116_Onl,SIT 116,Unit 16 SIT Topic,BSc CS Y4,Ms. Dorothy Kathambi,Full-Time,1000,SPAS,Online,1
+SCO 125_Phys,SCO 125,Unit 25 SCO Topic,BIT Y3,Dr. John Achola,Full-Time,80,SPAS,Physical,2
+SCO 125_Onl,SCO 125,Unit 25 SCO Topic,BIT Y3,Dr. John Achola,Full-Time,1000,SPAS,Online,1
+HTM 138_Phys,HTM 138,Unit 38 HTM Topic,BIT Y2,Dr. Dancan Shiradula,Part-Time,80,SPAS,Physical,2
+HTM 138_Onl,HTM 138,Unit 38 HTM Topic,BIT Y2,Dr. Dancan Shiradula,Part-Time,1000,SPAS,Online,1
+SCO 120_Phys,SCO 120,Unit 20 SCO Topic,BIT Y2,Dr. Simon Ndicu,Part-Time,60,SPAS,Physical,2
+SCO 120_Onl,SCO 120,Unit 20 SCO Topic,BIT Y2,Dr. Simon Ndicu,Part-Time,1000,SPAS,Online,1
+SST 162_Phys,SST 162,Unit 62 SST Topic,BSc Hosp Y1,Ms. Norah Njoki,Full-Time,50,SPAS,Physical,2
+SST 162_Onl,SST 162,Unit 62 SST Topic,BSc Hosp Y1,Ms. Norah Njoki,Full-Time,1000,SPAS,Online,1
+SIT 215_Phys,SIT 215,Unit 115 SIT Topic,BSc Math Y1,Mr. Jackson Kamiri,Full-Time,100,SPAS,Physical,2
+SIT 215_Onl,SIT 215,Unit 115 SIT Topic,BSc Math Y1,Mr. Jackson Kamiri,Full-Time,1000,SPAS,Online,1
+SIT 172_Phys,SIT 172,Unit 72 SIT Topic,BSc Math Y2,Dr. Ephantus Mwangi,Full-Time,100,SPAS,Physical,2
+SIT 172_Onl,SIT 172,Unit 72 SIT Topic,BSc Math Y2,Dr. Ephantus Mwangi,Full-Time,1000,SPAS,Online,1
+HTM 137_Phys,HTM 137,Unit 37 HTM Topic,BSc Env Y1,Dr. Roy Kiogora,Full-Time,50,SPAS,Physical,2
+HTM 137_Onl,HTM 137,Unit 37 HTM Topic,BSc Env Y1,Dr. Roy Kiogora,Full-Time,1000,SPAS,Online,1
+SMA 170_Phys,SMA 170,Unit 70 SMA Topic,BIT Y4,Dr. Julius Murumba,Part-Time,50,SPAS,Physical,2
+SMA 170_Onl,SMA 170,Unit 70 SMA Topic,BIT Y4,Dr. Julius Murumba,Part-Time,1000,SPAS,Online,1
+SMA 178_Phys,SMA 178,Unit 78 SMA Topic,BIT Y3,Dr. John Gitau,Part-Time,80,SPAS,Physical,2
+SMA 178_Onl,SMA 178,Unit 78 SMA Topic,BIT Y3,Dr. John Gitau,Part-Time,1000,SPAS,Online,1
+HSC 205_Phys,HSC 205,Unit 105 HSC Topic,BSc CS Y3,Dr. Ann Rintari,Part-Time,50,SPAS,Physical,2
+HSC 205_Onl,HSC 205,Unit 105 HSC Topic,BSc CS Y3,Dr. Ann Rintari,Part-Time,1000,SPAS,Online,1
+SIT 180_Phys,SIT 180,Unit 80 SIT Topic,BIT Y1,Dr Benjamin Kinyili,Full-Time,60,SPAS,Physical,2
+SIT 180_Onl,SIT 180,Unit 80 SIT Topic,BIT Y1,Dr Benjamin Kinyili,Full-Time,1000,SPAS,Online,1
+UCU 239_Phys,UCU 239,Unit 139 UCU Topic,BSc CS Y2,Dr. David Kaimenyi,Full-Time,80,SPAS,Physical,2
+UCU 239_Onl,UCU 239,Unit 139 UCU Topic,BSc CS Y2,Dr. David Kaimenyi,Full-Time,1000,SPAS,Online,1
+HTM 121_Phys,HTM 121,Unit 21 HTM Topic,BSc CS Y1,Dr. Ruth Wambua,Full-Time,100,SPAS,Physical,2
+HTM 121_Onl,HTM 121,Unit 21 HTM Topic,BSc CS Y1,Dr. Ruth Wambua,Full-Time,1000,SPAS,Online,1
+SCO 238_Phys,SCO 238,Unit 138 SCO Topic,BIT Y1,Dr. Peter Murage,Full-Time,100,SPAS,Physical,2
+SCO 238_Onl,SCO 238,Unit 138 SCO Topic,BIT Y1,Dr. Peter Murage,Full-Time,1000,SPAS,Online,1
+HTM 148_Phys,HTM 148,Unit 48 HTM Topic,BSc Env Y1,Dr. Paul Mwangi,Part-Time,60,SPAS,Physical,2
+HTM 148_Onl,HTM 148,Unit 48 HTM Topic,BSc Env Y1,Dr. Paul Mwangi,Part-Time,1000,SPAS,Online,1
+SMA 144_Phys,SMA 144,Unit 44 SMA Topic,BSc Env Y1,Dr. Ruth Wambua,Full-Time,100,SPAS,Physical,2
+SMA 144_Onl,SMA 144,Unit 44 SMA Topic,BSc Env Y1,Dr. Ruth Wambua,Full-Time,1000,SPAS,Online,1
+SMA 217_Phys,SMA 217,Unit 117 SMA Topic,BSc CS Y1,Dr. Paul Mwangi,Full-Time,50,SPAS,Physical,2
+SMA 217_Onl,SMA 217,Unit 117 SMA Topic,BSc CS Y1,Dr. Paul Mwangi,Full-Time,1000,SPAS,Online,1
+SIT 156_Phys,SIT 156,Unit 56 SIT Topic,BIT Y4,Dr. Ann Rintari,Full-Time,100,SPAS,Physical,2
+SIT 156_Onl,SIT 156,Unit 56 SIT Topic,BIT Y4,Dr. Ann Rintari,Full-Time,1000,SPAS,Online,1
+HSC 191_Phys,HSC 191,Unit 91 HSC Topic,BSc CS Y1,Dr. Kipkosigei Bitok,Full-Time,50,SPAS,Physical,2
+HSC 191_Onl,HSC 191,Unit 91 HSC Topic,BSc CS Y1,Dr. Kipkosigei Bitok,Full-Time,1000,SPAS,Online,1
+SCO 149_Phys,SCO 149,Unit 49 SCO Topic,BIT Y1,Dr. Abraham Matheka,Full-Time,100,SPAS,Physical,2
+SCO 149_Onl,SCO 149,Unit 49 SCO Topic,BIT Y1,Dr. Abraham Matheka,Full-Time,1000,SPAS,Online,1
+SCO 194_Phys,SCO 194,Unit 94 SCO Topic,BIT Y2,Mr. Gordon Agutu,Full-Time,80,SPAS,Physical,2
+SCO 194_Onl,SCO 194,Unit 94 SCO Topic,BIT Y2,Mr. Gordon Agutu,Full-Time,1000,SPAS,Online,1
+SCO 201_Phys,SCO 201,Unit 101 SCO Topic,BIT Y1,Mr. Boniface Mwangi,Full-Time,60,SPAS,Physical,2
+SCO 201_Onl,SCO 201,Unit 101 SCO Topic,BIT Y1,Mr. Boniface Mwangi,Full-Time,1000,SPAS,Online,1
+HSC 167_Phys,HSC 167,Unit 67 HSC Topic,BSc Math Y2,Dr. Simon Ndicu,Part-Time,100,SPAS,Physical,2
+HSC 167_Onl,HSC 167,Unit 67 HSC Topic,BSc Math Y2,Dr. Simon Ndicu,Part-Time,1000,SPAS,Online,1
+UCU 182_Phys,UCU 182,Unit 82 UCU Topic,BSc CS Y2,Dr. Ephantus Mwangi,Full-Time,60,SPAS,Physical,2
+UCU 182_Onl,UCU 182,Unit 82 UCU Topic,BSc CS Y2,Dr. Ephantus Mwangi,Full-Time,1000,SPAS,Online,1
+SIT 108_Phys,SIT 108,Unit 8 SIT Topic,BSc CS Y4,Dr. Ann Rintari,Full-Time,80,SPAS,Physical,2
+SIT 108_Onl,SIT 108,Unit 8 SIT Topic,BSc CS Y4,Dr. Ann Rintari,Full-Time,1000,SPAS,Online,1
+SIT 204_Phys,SIT 204,Unit 104 SIT Topic,BSc CS Y4,Dr. Peter Mwangi,Part-Time,80,SPAS,Physical,2
+SIT 204_Onl,SIT 204,Unit 104 SIT Topic,BSc CS Y4,Dr. Peter Mwangi,Part-Time,1000,SPAS,Online,1
+UCU 115_Phys,UCU 115,Unit 15 UCU Topic,BIT Y4,Dr. Ruth Wambua,Full-Time,60,SPAS,Physical,2
+UCU 115_Onl,UCU 115,Unit 15 UCU Topic,BIT Y4,Dr. Ruth Wambua,Full-Time,1000,SPAS,Online,1
+HSC 110_Phys,HSC 110,Unit 10 HSC Topic,BSc Hosp Y1,Dr. Joab Onyango,Full-Time,50,SPAS,Physical,2
+HSC 110_Onl,HSC 110,Unit 10 HSC Topic,BSc Hosp Y1,Dr. Joab Onyango,Full-Time,1000,SPAS,Online,1
+SIT 143_Phys,SIT 143,Unit 43 SIT Topic,BIT Y2,Dr. John Kung'u,Full-Time,60,SPAS,Physical,2
+SIT 143_Onl,SIT 143,Unit 43 SIT Topic,BIT Y2,Dr. John Kung'u,Full-Time,1000,SPAS,Online,1
+SIT 189_Phys,SIT 189,Unit 89 SIT Topic,BSc Math Y2,Dr. Joab Onyango,Full-Time,50,SPAS,Physical,2
+SIT 189_Onl,SIT 189,Unit 89 SIT Topic,BSc Math Y2,Dr. Joab Onyango,Full-Time,1000,SPAS,Online,1
+SMA 157_Phys,SMA 157,Unit 57 SMA Topic,BSc CS Y4,Mr. Jackson Kamiri,Full-Time,60,SPAS,Physical,2
+SMA 157_Onl,SMA 157,Unit 57 SMA Topic,BSc CS Y4,Mr. Jackson Kamiri,Full-Time,1000,SPAS,Online,1
+HSC 236_Phys,HSC 236,Unit 136 HSC Topic,BIT Y3,Dr. Albert Kariuki,Full-Time,80,SPAS,Physical,2
+HSC 236_Onl,HSC 236,Unit 136 HSC Topic,BIT Y3,Dr. Albert Kariuki,Full-Time,1000,SPAS,Online,1
+ECD 185_Phys,ECD 185,Unit 85 ECD Topic,BSc CS Y2,Dr. John Kung'u,Full-Time,60,SPAS,Physical,2
+ECD 185_Onl,ECD 185,Unit 85 ECD Topic,BSc CS Y2,Dr. John Kung'u,Full-Time,1000,SPAS,Online,1

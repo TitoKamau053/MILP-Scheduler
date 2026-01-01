@@ -1,0 +1,63 @@
+CourseCode,CourseTitle,Group,Lecturer,Size,Dept,PreferredDay,PreferredSlot
+SCO 103,Object-Oriented Programming I,BSc CS 100,Mr. Jackson Kamiri,80,Computing,Wed,08:00-10:00
+SCO 105,Data Communication Technologies,BSc CS 100,Dr. Elijah Maseno,80,Computing,Mon,08:00-10:00
+SCO 109,Linear Algebra for Computer Science,BSc CS 100,Dr. Jimrise Ochwach,80,Computing,Tue,10:00-12:00
+SCO 113,Foundations of Artificial Intelligence,BSc CS 100,Dr. Collins Oduor,80,Computing,Mon,10:00-12:00
+SMA 104,Calculus I,BSc CS 100,Dr. Jimrise Ochwach,80,Computing,Tue,08:00-10:00
+UCU 111,Creative and Critical Thinking,BSc CS 100,Dr. Ephantus Mwangi,150,Common,Tue,14:00-16:00
+UCU 112,Creativity and Innovation,BSc CS 100,Dr. Keziah Gakahu,150,Common,Thu,08:00-10:00
+SCO 201,Computer Organization and Architecture II,BSc CS 200,Ms. Esther Wambui,70,Computing,Tue,11:00-13:00
+SCO 203,Software Testing and Quality Assurance,BSc CS 200,Ms. Dorothy Kathambi,70,Computing,Tue,13:00-15:00
+SCO 207,Web Development Technologies,BSc CS 200,Dr. Peter Mwangi,70,Computing,Mon,07:00-09:00
+SCO 209,Microprocessor and Assembly,BSc CS 200,Dr. Ruth Wambua,70,Computing,Mon,10:00-12:00
+SCO 211,Automata Theory,BSc CS 200,Dr. Ruth Wambua,70,Computing,Tue,13:00-15:00
+SCO 215,System Analysis And Design,BSc CS 200,Dr. Peter Mwangi,70,Computing,Tue,07:00-09:00
+SCO 217,Operating Systems,BSc CS 200,Mr. Joshua Mueke,70,Computing,Mon,11:00-13:00
+SCO 301,Compiler Construction,BSc CS 300,Dr. Abraham Matheka,60,Computing,Mon,07:00-09:00
+SCO 303,Simulation And Modeling,BSc CS 300,Mr. Evariste Ntaho,60,Computing,Thu,08:00-10:00
+SCO 305,Computer Graphics,BSc CS 300,Dr. Collins Oduor,60,Computing,Tue,11:00-13:00
+SCO 307,Human Computer Interface,BSc CS 300,Dr. Julius Murumba,60,Computing,Mon,09:00-11:00
+SCO 309,Research Methods and Tech Writing,BSc CS 300,Dr. Ruth Wambua,60,Computing,Tue,08:00-10:00
+SCO 311,Electronic Commerce,BSc CS 300,Dr. Abraham Matheka,60,Computing,Mon,10:00-12:00
+SCO 401,Network Management,BSc CS 400,Dr. Elijah Maseno,50,Computing,Mon,11:00-13:00
+SCO 403,Networked Applications,BSc CS 400,Mr. Dan Ojwang,50,Computing,Tue,12:00-14:00
+SCO 405,Compression,BSc CS 400,Mr. Gogo Otieno Kevin,50,Computing,Wed,12:00-14:00
+SCO 407,Natural Language Processing,BSc CS 400,Dr. Catherine Mukunga,50,Computing,Thu,12:00-14:00
+SCO 411,Neural Networks,BSc CS 400,Dr. Elijah Maseno,50,Computing,Mon,13:00-15:00
+SCO 413,Robotics,BSc CS 400,Dr. Ruth Wambua,50,Computing,Thu,08:00-10:00
+SCO 415,Data Warehouse and Mining,BSc CS 400,Mr. Jackson Kamiri,50,Computing,Mon,08:00-10:00
+SIT 104,Visual Basic Programming,BIT 100,Dr. Julius Murumba,85,Computing,Mon,08:00-10:00
+SIT 106,Programming Methodology,BIT 100,Mr. Gordon Agutu,85,Computing,Mon,12:00-14:00
+SIT 107,Intro to Information Systems,BIT 100,Mr. Boniface Mwangi,85,Computing,Wed,08:00-10:00
+SIT 108,Introduction to Logic,BIT 100,Mr. Dan Ojwang,85,Computing,Wed,10:00-12:00
+SIT 109,Intro to Internet Technology,BIT 100,Mr. Harun Kamau,85,Computing,Tue,10:00-12:00
+SIT 110,Introduction to Statistics,BIT 100,Mr. John Kinyanjui,85,Computing,Tue,08:00-10:00
+SIT 113,Networking,BIT 100,Dr. Peter Mwangi,85,Computing,Mon,10:00-12:00
+SIT 205,Entrepreneurship and Biz Planning,BIT 200,Ms. Mary Wanjau,75,Computing,Thu,10:00-12:00
+SIT 207,Software Engineering,BIT 200,Dr. Peter Mwangi,75,Computing,Tue,13:00-15:00
+SIT 208,Ethics in Information Systems,BIT 200,Ms. Norah Njoki,75,Computing,Tue,11:00-13:00
+SIT 209,Web Design,BIT 200,Mr. Harun Kamau,75,Computing,Mon,11:00-13:00
+SIT 210,Multimedia Systems,BIT 200,Dr. Catherine Mukunga,75,Computing,Mon,08:00-10:00
+SIT 211,Intro to Logic Programming,BIT 200,Dr. David Kaimenyi,75,Computing,Mon,09:00-11:00
+SIT 301,Database Administration,BIT 300,Mr. Harun Kamau,65,Computing,Wed,08:00-10:00
+SIT 307,Management Information Systems,BIT 300,Ms. Purity Mureithi,65,Computing,Tue,13:00-15:00
+SIT 308,Human Computer Interaction,BIT 300,Dr. Julius Murumba,65,Computing,Thu,11:00-13:00
+SIT 309,Object Oriented Design,BIT 300,Dr. Peter Mwangi,65,Computing,Tue,10:00-12:00
+SIT 310,Fundamentals of Programming,BIT 300,Mr. Boniface Mwangi,65,Computing,Mon,11:00-13:00
+SIT 311,Computer Architecture,BIT 300,Ms. Norah Njoki,65,Computing,Tue,08:00-10:00
+SMA 191,Intro to Computer programming,BSc MathCS 100,Dr. Peter Mwangi,60,Computing,Mon,13:00-15:00
+SMA 201,Calculus III,BSc MathCS 200,Mr. John Kinyanjui,55,Computing,Wed,07:00-09:00
+SMA 203,Linear Algebra II,BSc MathCS 200,Prof. Winfred Mutuku,55,Computing,Wed,10:00-12:00
+SMA 204,Algebraic Structures,BSc MathCS 200,Dr. Peter Muiruri,55,Computing,Mon,11:00-13:00
+SST 205,Probability and Statistics II,BSc MathCS 200,Dr. Peter Murage,55,Computing,Tue,11:00-13:00
+SMA 332,Methods of Applied Math I,BSc MathCS 300,Dr. Jimrise Ochwach,45,Computing,Thu,08:00-10:00
+SMA 334,Fluid Mechanics II,BSc MathCS 300,Dr. Roy Kiogora,45,Computing,Mon,13:00-15:00
+SMA 336,ODE II,BSc MathCS 300,Prof. Winfred Mutuku,45,Computing,Tue,11:00-13:00
+SMA 390,Scientific Programming,BSc MathCS 300,Dr. John Kung'u,45,Computing,Tue,09:00-11:00
+SST 100,Intro to Biz and Social Stats,BSc StatProg 100,Mr. Evariste Ntaho,60,Computing,Wed,10:00-12:00
+SST 102,Discrete Mathematics,BSc StatProg 100,Dr. Peter Muiruri,60,Computing,Mon,10:00-12:00
+SST 103,Linear Algebra I,BSc StatProg 100,Dr. John Achola,60,Computing,Wed,12:00-14:00
+HTM 111,Intro to Travel and Tours,BSc Hosp 100,Dr. Michael Murimi,65,Environment,Wed,07:00-09:00
+HTM 218,MICE,BSc Hosp 200,Dr. Kipkosigei Bitok,65,Environment,Mon,12:00-14:00
+ECD 318,Participatory Community Dev,BSc EnvStudies 300,Dr Benjamin Kinyili,50,Environment,Tue,13:00-15:00
+ESU 300,Env Impact Assessment,BSc EnvStudies 300,Dr. Jane Gachambi,50,Environment,Tue,09:00-11:00

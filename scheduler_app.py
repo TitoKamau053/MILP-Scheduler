@@ -1,262 +1,219 @@
-# MAMA NGINA UNIVERSITY COLLEGE
-# AUTOMATED CLASS SCHEDULER & DASHBOARD
-
-
 import streamlit as st
 import pulp
 import pandas as pd
 import plotly.express as px
 
-
 # 1. PAGE CONFIGURATION
 st.set_page_config(
-    page_title="MNUC Scheduler",
-    layout="wide"
+    page_title="MNUC Scheduler", 
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-st.title("Mama Ngina University College: Smart Scheduler")
-st.markdown("Optimization-driven scheduling for the School of Pure & Applied Sciences.")
+# Professional, Minimal CSS (Updated to be Dark Mode Compatible)
+st.markdown("""
+    <style>
+    /* Remove white background constraint */
+    .reportview-container { background: transparent; }
+    .main .block-container { padding-top: 1rem; }
+    
+    /* Button Styling */
+    .stButton>button {
+        width: 100%; border-radius: 6px; height: 2.5em;
+        background-color: #f0f2f6; color: #31333F; border: 1px solid #d6d6d8;
+    }
+    .stButton>button:hover {
+        border-color: #0068c9; color: #0068c9; background-color: #ffffff;
+    }
+    
+    /* Ensure text is readable in both modes */
+    div[data-testid="stMetricValue"] { font-size: 1.8rem; }
+    </style>
+    """, unsafe_allow_html=True)
 
-
-# 2. DATA SETUP (The "Database")
 @st.cache_data
 def load_data():
-    # A. Rooms
     rooms = {
-        'Lab_1': 40,    'Lab_2': 40,
-        'Hall_A': 100,  'Hall_B': 100,
-        'Room_C': 60,   'Room_D': 60
+        'Theatre Main': 300, 'Theatre Annex': 250,
+        'Hall East': 150, 'Hall West': 150,
+        'Lab CS1': 80, 'Lab CS2': 80, 'Lab Physics': 80,
+        'Room A1': 60, 'Room A2': 60, 'Room B1': 60, 'Room B2': 60,
+        'Room C1': 50, 'Room C2': 50, 'ONLINE': 9999
     }
-
-    # B. Time Slots
-    # We map specific hours for the Gantt Chart visualization
-    time_map = {
-        '08:00-10:00': {'start': '08:00', 'end': '10:00', 'duration': 2},
-        '11:00-13:00': {'start': '11:00', 'end': '13:00', 'duration': 2},
-        '14:00-17:00': {'start': '14:00', 'end': '17:00', 'duration': 3}
-    }
+    
+    # Time Slots: 07:00 to 17:00 (Hours 7 to 16)
+    hours = list(range(7, 17)) 
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
-    slots = list(time_map.keys())
-
-    # C. Lecturers
-    lecturers = [
-        'Dr. Wanjiku (CS)', 'Prof. Omondi (IT)', 'Mr. Kamau (Math/CS)', 
-        'Dr. Chebet (Stats)', 'Mrs. Njoroge (Library Sc)',
-        'Prof. Hassan (Env Sci)', 'Dr. Akinyi (Hosp)', 'Mr. Juma (Env Health)', 
-        'Ms. Otieno (Comm Dev)', 'Dr. Koech (Climate)'
-    ]
-
-    # D. Courses
-    events_data = [
-        {'Course': 'COM 110: Intro to Programming', 'Group': 'BSc CS Y1', 'Lecturer': 'Dr. Wanjiku (CS)', 'Size': 80, 'Dept': 'Computing'},
-        {'Course': 'COM 220: Data Structures',       'Group': 'BSc CS Y2', 'Lecturer': 'Dr. Wanjiku (CS)', 'Size': 75, 'Dept': 'Computing'},
-        {'Course': 'BIT 111: Fund. of IT',          'Group': 'BIT Y1',    'Lecturer': 'Prof. Omondi (IT)', 'Size': 85, 'Dept': 'Computing'},
-        {'Course': 'BIT 212: Database Systems',     'Group': 'BIT Y2',    'Lecturer': 'Prof. Omondi (IT)', 'Size': 80, 'Dept': 'Computing'},
-        {'Course': 'MAT 101: Calculus I',           'Group': 'BSc MathCS Y1', 'Lecturer': 'Mr. Kamau (Math/CS)', 'Size': 60, 'Dept': 'Computing'},
-        {'Course': 'COM 301: Algorithms',           'Group': 'BSc MathCS Y3', 'Lecturer': 'Mr. Kamau (Math/CS)', 'Size': 50, 'Dept': 'Computing'},
-        {'Course': 'STA 102: Probability I',        'Group': 'BSc StatProg Y1', 'Lecturer': 'Dr. Chebet (Stats)', 'Size': 65, 'Dept': 'Computing'},
-        {'Course': 'STA 305: Regression Analysis',  'Group': 'BSc StatProg Y3', 'Lecturer': 'Dr. Chebet (Stats)', 'Size': 55, 'Dept': 'Computing'},
-        {'Course': 'LIS 101: Info & Society',       'Group': 'BLIS Y1',   'Lecturer': 'Mrs. Njoroge (Library Sc)', 'Size': 50, 'Dept': 'Computing'},
-        {'Course': 'HTM 100: Intro to Hospitality', 'Group': 'BSc Hosp Y1', 'Lecturer': 'Dr. Akinyi (Hosp)', 'Size': 70, 'Dept': 'Environment'},
-        {'Course': 'HTM 210: Food Production',      'Group': 'BSc Hosp Y2', 'Lecturer': 'Dr. Akinyi (Hosp)', 'Size': 65, 'Dept': 'Environment'},
-        {'Course': 'EVH 101: Public Health',        'Group': 'BSc EnvHealth Y1', 'Lecturer': 'Mr. Juma (Env Health)', 'Size': 55, 'Dept': 'Environment'},
-        {'Course': 'ECD 105: Community Dev',        'Group': 'BSc EnvCom Y1', 'Lecturer': 'Ms. Otieno (Comm Dev)', 'Size': 60, 'Dept': 'Environment'},
-        {'Course': 'ENS 201: Ecology',              'Group': 'BSc EnvSci Y2', 'Lecturer': 'Prof. Hassan (Env Sci)', 'Size': 55, 'Dept': 'Environment'},
-        {'Course': 'ENS 401: Env Impact Assess',    'Group': 'BSc EnvSci Y4', 'Lecturer': 'Prof. Hassan (Env Sci)', 'Size': 40, 'Dept': 'Environment'},
-        {'Course': 'CRM 101: Resource Mgmt',        'Group': 'BSc CRM Y1',    'Lecturer': 'Ms. Otieno (Comm Dev)', 'Size': 50, 'Dept': 'Environment'},
-        {'Course': 'MES 501: Climate Modeling',     'Group': 'MSc Climate Y1', 'Lecturer': 'Dr. Koech (Climate)', 'Size': 20, 'Dept': 'Environment'},
-        {'Course': 'UCI 101: Foundations of Knowledge', 'Group': 'All Y1', 'Lecturer': 'Mrs. Njoroge (Library Sc)', 'Size': 100, 'Dept': 'Common'}
-    ]
     
-    df = pd.DataFrame(events_data)
-    # Create unique EventID
-    df['EventID'] = df['Course'] + "_" + df['Group']
-    return rooms, days, slots, time_map, lecturers, df
-
-# Load Data
-rooms, days, slots, time_map, lecturers, df_events = load_data()
-
-
-# 3. SIDEBAR CONTROLS
-st.sidebar.header("Scheduler Settings")
-
-if st.sidebar.button("Run Optimization"):
-    with st.spinner("Solving MILP Model... (This uses 4 Constraints)"):
+    try:
+        df = pd.read_csv("mnuc_large_dataset.csv")
+    except FileNotFoundError:
+        st.error("Dataset 'mnuc_large_dataset.csv' not found. Please run the generation script first.")
+        st.stop()
         
-        # 4. THE SOLVER ENGINE (MILP)
-        
+    return rooms, days, hours, df
+
+rooms_db, days_db, hours_db, df_events = load_data()
+
+# --- SIDEBAR ---
+st.sidebar.title("Configuration")
+st.sidebar.caption("School of Pure & Applied Sciences")
+st.sidebar.markdown("---")
+st.sidebar.metric("Total Sessions", len(df_events))
+
+if st.sidebar.button("Generate Schedule"):
+    with st.spinner("Optimizing constraints..."):
         model = pulp.LpProblem("MNUC_Scheduler", pulp.LpMinimize)
-        x = {}
-
-        # 4.1 Create Variables
-        for idx, event in df_events.iterrows():
-            e_id = event['EventID']
-            # Sanitize e_id for solver (remove spaces/colons)
-            e_id_clean = e_id.replace(" ", "_").replace(":", "")
-            size = event['Size']
+        
+        # 1. SETUP
+        valid_starts = {}
+        for idx, row in df_events.iterrows():
+            eid = row['EventID']
+            dur = row['Duration']
+            is_online = (row['SessionType'] == 'Online')
             
-            for r, cap in rooms.items():
-                if cap >= size: # Variable Constraint: Capacity
-                    for d in days:
-                        for s in slots:
-                            # Use clean ID for the variable name
-                            x[(e_id, r, d, s)] = pulp.LpVariable(f"x_{e_id_clean}_{r}_{d}_{s}", 0, 1, pulp.LpBinary)
-
-        # 4.2 Constraints
-        
-        # C1: Once per week
-        for e_id in df_events['EventID']:
-            possible = [x[(e_id, r, d, s)] for r in rooms for d in days for s in slots if (e_id, r, d, s) in x]
-            model += pulp.lpSum(possible) == 1, f"Once_{e_id.replace(' ','_').replace(':','')}"
-
-        # C2: Room Conflict
-        for r in rooms:
-            for d in days:
-                for s in slots:
-                    room_usage = [x[(e_id, r, d, s)] for e_id in df_events['EventID'] if (e_id, r, d, s) in x]
-                    model += pulp.lpSum(room_usage) <= 1, f"Room_{r}_{d}_{s}"
-
-        # C3: Lecturer Availability
-        for l in lecturers:
-            prof_events = df_events[df_events['Lecturer'] == l]['EventID']
-            for d in days:
-                for s in slots:
-                    prof_vars = [x[(e_id, r, d, s)] for e_id in prof_events for r in rooms if (e_id, r, d, s) in x]
-                    model += pulp.lpSum(prof_vars) <= 1, f"Lec_{l.replace(' ','_').replace('.','')}_{d}_{s}"
-        
-        # C4: Student Group Conflict
-        groups = df_events['Group'].unique()
-        for g in groups:
-            g_events = df_events[df_events['Group'] == g]['EventID']
-            for d in days:
-                for s in slots:
-                    g_vars = [x[(e_id, r, d, s)] for e_id in g_events for r in rooms if (e_id, r, d, s) in x]
-                    model += pulp.lpSum(g_vars) <= 1, f"Group_{g.replace(' ','_')}_{d}_{s}"
-
-        # Solve
-        status = model.solve()
-        
-        if pulp.LpStatus[status] == 'Optimal':
-            st.sidebar.success("Optimization Successful!")
+            valid_starts[eid] = []
+            eligible_rooms = ['ONLINE'] if is_online else [r for r in rooms_db if r != 'ONLINE' and rooms_db[r] >= row['Size']]
             
-            # Extract Results
+            for r in eligible_rooms:
+                for d in days_db:
+                    for h in [t for t in hours_db if t + dur <= 17]:
+                        valid_starts[eid].append((r, d, h))
+        
+        # Variables
+        x = pulp.LpVariable.dicts("x", ((e, r, d, h) for e in valid_starts for (r, d, h) in valid_starts[e]), cat='Binary')
+        
+        # 2. CONSTRAINTS
+        # C1: Assign Once
+        for eid in df_events['EventID']:
+            if eid in valid_starts:
+                model += pulp.lpSum(x[(eid, r, d, h)] for (r, d, h) in valid_starts[eid]) == 1
+        
+        # C2: Room Capacity
+        for r in rooms_db:
+            if r == 'ONLINE': continue
+            for d in days_db:
+                for t in hours_db:
+                    active = []
+                    for eid, row in df_events.iterrows():
+                        if row['SessionType'] == 'Online': continue
+                        dur = row['Duration']
+                        if eid in valid_starts:
+                            for (rv, dv, hv) in valid_starts[eid]:
+                                if rv == r and dv == d and (t - dur + 1 <= hv <= t):
+                                    active.append(x[(eid, rv, dv, hv)])
+                    if active: model += pulp.lpSum(active) <= 1
+
+        # C3: Lecturer Overlap
+        for lec in df_events['Lecturer'].unique():
+            lec_events = df_events[df_events['Lecturer'] == lec]
+            for d in days_db:
+                for t in hours_db:
+                    active = []
+                    for _, row in lec_events.iterrows():
+                        eid = row['EventID']
+                        dur = row['Duration']
+                        if eid in valid_starts:
+                            for (rv, dv, hv) in valid_starts[eid]:
+                                if dv == d and (t - dur + 1 <= hv <= t):
+                                    active.append(x[(eid, rv, dv, hv)])
+                    if active: model += pulp.lpSum(active) <= 1
+
+        # 3. SOLVE
+        if model.solve():
+            st.success("Optimization Complete")
             results = []
-            for key, var in x.items():
-                if pulp.value(var) == 1:
-                    (e_id, r, d, s) = key
-                    details = df_events[df_events['EventID'] == e_id].iloc[0]
-                    # Map Day to Date-like string for Gantt (using a dummy week)
-                    day_map = {'Mon': '2023-01-02', 'Tue': '2023-01-03', 'Wed': '2023-01-04', 'Thu': '2023-01-05', 'Fri': '2023-01-06'}
-                    
-                    results.append({
-                        'Day': d,
-                        'Slot': s,
-                        'Start': f"{day_map[d]} {time_map[s]['start']}",
-                        'End': f"{day_map[d]} {time_map[s]['end']}",
-                        'Course': details['Course'],
-                        'Group': details['Group'],
-                        'Room': r,
-                        'Lecturer': details['Lecturer'],
-                        'Department': details['Dept'],
-                        'Size': details['Size']
-                    })
+            base_dates = {'Mon':'2026-01-01', 'Tue':'2026-01-02', 'Wed':'2026-01-03', 'Thu':'2026-01-04', 'Fri':'2026-01-05'}
             
-            st.session_state['results'] = pd.DataFrame(results)
+            for e in valid_starts:
+                for (r, d, h) in valid_starts[e]:
+                    if pulp.value(x[(e, r, d, h)]) == 1:
+                        row = df_events[df_events['EventID'] == e].iloc[0]
+                        start_time = f"{h:02d}:00"
+                        end_time = f"{h+row['Duration']:02d}:00"
+                        results.append({
+                            'Day': d,
+                            'Time Interval': f"{start_time} - {end_time}",
+                            'Unit': row['CourseCode'],
+                            'Title': row['CourseTitle'],
+                            'Type': row['SessionType'],
+                            'Room': r,
+                            'Lecturer': row['Lecturer'],
+                            'Group': row['Group'],
+                            'Start_Hidden': f"{base_dates[d]} {start_time}", 
+                            'End_Hidden': f"{base_dates[d]} {end_time}"
+                        })
+            
+            df_res = pd.DataFrame(results)
+            st.session_state['schedule_data'] = df_res
         else:
-            st.error("Infeasible! Could not find a schedule constraints.")
+            st.error("Infeasible. Constraints too tight.")
 
+# --- MAIN DASHBOARD ---
+if 'schedule_data' in st.session_state:
+    df_out = st.session_state['schedule_data']
+    
+    # METRICS
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Total Classes", len(df_out))
+    c2.metric("Physical", len(df_out[df_out['Type']=='Physical']))
+    c3.metric("Online", len(df_out[df_out['Type']=='Online']))
+    c4.metric("Venue Utilized", df_out['Room'].nunique())
 
-# 5. VISUALIZATION DASHBOARD
-if 'results' in st.session_state:
-    df_res = st.session_state['results']
+    # TABS
+    tab1, tab2 = st.tabs(["Timeline View", "Table View"])
     
-    # --- TABS ---
-    tab1, tab2, tab3 = st.tabs(["Master Schedule", "Room Analytics", "Lecturer Load"])
-    
-    # --- TAB 1: VISUAL TIMETABLE ---
     with tab1:
-        st.subheader("Visual Timetable")
+        st.markdown("### Interactive Schedule")
         
-        # Filter Options
-        filter_type = st.radio("View By:", ["Room", "Student Group", "Lecturer"], horizontal=True)
+        # CONTROLS
+        c_view, c_day = st.columns([1, 1])
+        with c_view:
+            view_mode = st.selectbox("Group Rows By:", ["Room", "Lecturer", "Group"])
+        with c_day:
+            day_filter = st.selectbox("Filter Day:", ["Mon", "Tue", "Wed", "Thu", "Fri"])
+
+        # DATA FILTERING
+        plot_df = df_out.copy()
+        if day_filter != "All Days":
+            plot_df = plot_df[plot_df['Day'] == day_filter]
+
+        # DYNAMIC HEIGHT
+        n_rows = plot_df[view_mode].nunique()
+        chart_height = max(500, n_rows * 40)
+
+        # GANTT CHART
+        fig = px.timeline(
+            plot_df, 
+            x_start="Start_Hidden", 
+            x_end="End_Hidden", 
+            y=view_mode,             
+            color="Day",             
+            text="Unit",
+            hover_data=["Title", "Time Interval", "Room", "Group"],
+            height=chart_height,
+            color_discrete_sequence=px.colors.qualitative.Pastel
+        )
         
-        if filter_type == "Room":
-            selected_item = st.selectbox("Select Room", sorted(rooms.keys()))
-            filtered_df = df_res[df_res['Room'] == selected_item]
-            color_by = 'Course'
-        elif filter_type == "Student Group":
-            selected_item = st.selectbox("Select Group", sorted(df_events['Group'].unique()))
-            filtered_df = df_res[df_res['Group'] == selected_item]
-            color_by = 'Room'
-        else:
-            selected_item = st.selectbox("Select Lecturer", sorted(lecturers))
-            filtered_df = df_res[df_res['Lecturer'] == selected_item]
-            color_by = 'Room'
-
-        if not filtered_df.empty:
-            # GANTT CHART
-            fig = px.timeline(
-                filtered_df, 
-                x_start="Start", 
-                x_end="End", 
-                y="Day", 
-                color=color_by,
-                hover_data=["Course", "Room", "Lecturer", "Slot"],
-                title=f"Schedule for {selected_item}"
-            )
-            # Fix Axis to show Time only
-            fig.layout.xaxis.type = 'date'
-            fig.update_xaxes(tickformat="%H:%M")
-            fig.update_yaxes(categoryorder='array', categoryarray=['Fri', 'Thu', 'Wed', 'Tue', 'Mon']) # Monday at top
-            st.plotly_chart(fig, use_container_width=True)
-            
-            # Simple Table
-            # FIXED LINE BELOW: Sort First, Then Select Columns
-            st.dataframe(
-                filtered_df.sort_values(by=['Day', 'Start'])[['Day', 'Slot', 'Course', 'Room', 'Lecturer']]
-            )
-        else:
-            st.info("No classes scheduled for this selection.")
-
-    # --- TAB 2: ROOM ANALYTICS ---
+        # CLEAN LAYOUT (Updated to remove white background force)
+        fig.update_xaxes(tickformat="%H:%M", title="Time (07:00 - 17:00)", side="top")
+        fig.update_yaxes(autorange="reversed", title=None)
+        
+        # REMOVED: plot_bgcolor='white', showgrid=True settings
+        # This allows Plotly to inherit the Streamlit theme (Dark/Light)
+        fig.update_layout(
+            margin=dict(l=10, r=10, t=50, b=10),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+        )
+        
+        st.plotly_chart(fig, width="stretch")
+        
     with tab2:
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("### Room Utilization (Count)")
-            room_counts = df_res['Room'].value_counts().reset_index()
-            room_counts.columns = ['Room', 'Classes Scheduled']
-            fig_room = px.bar(room_counts, x='Room', y='Classes Scheduled', color='Classes Scheduled', color_continuous_scale='Viridis')
-            st.plotly_chart(fig_room, use_container_width=True)
-
-        with col2:
-            st.markdown("### Capacity Efficiency")
-            # Calculate Average Efficiency (Class Size / Room Cap)
-            efficiency_data = []
-            for r in rooms:
-                classes_in_room = df_res[df_res['Room'] == r]
-                if not classes_in_room.empty:
-                    avg_eff = (classes_in_room['Size'].mean() / rooms[r]) * 100
-                    efficiency_data.append({'Room': r, 'Efficiency %': avg_eff})
-            
-            df_eff = pd.DataFrame(efficiency_data)
-            fig_eff = px.pie(df_eff, values='Efficiency %', names='Room', title='Avg Seat Occupancy %')
-            st.plotly_chart(fig_eff, use_container_width=True)
-
-    # --- TAB 3: LECTURER LOAD ---
-    with tab3:
-        st.markdown("### Lecturer Workload")
-        lec_counts = df_res['Lecturer'].value_counts().reset_index()
-        lec_counts.columns = ['Lecturer', 'Classes Taught']
-        
-        fig_lec = px.bar(lec_counts, y='Lecturer', x='Classes Taught', orientation='h', color='Classes Taught')
-        st.plotly_chart(fig_lec, use_container_width=True)
-        
-        st.dataframe(df_res.groupby(['Lecturer', 'Department']).size().reset_index(name='Total Classes'))
+        st.dataframe(
+            df_out[['Day', 'Time Interval', 'Unit', 'Title', 'Room', 'Lecturer', 'Group']].sort_values(['Day', 'Time Interval']),
+            hide_index=True,
+            width="stretch"
+        )
 
 else:
-    st.info("Click 'Run Optimization' in the sidebar to generate the schedule!")
-    
-    # Show input data preview
-    st.subheader("Current Dataset Preview")
-    st.dataframe(df_events)
+    st.info("Click 'Generate Schedule' in the sidebar to start.")
