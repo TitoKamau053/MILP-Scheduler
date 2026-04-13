@@ -61,10 +61,11 @@ st.sidebar.markdown("")
 st.sidebar.metric("Total Sessions", len(df_events))
 
 if st.sidebar.button("Generate Schedule"):
-    with st.spinner("Optimizing constraints..."):
-        model = pulp.LpProblem("MNUC_Scheduler", pulp.LpMinimize)
+    with st.spinner("Optimizing schedule with HiGHS and ML Cost Weights..."):
+        # 1. INITIALIZE MODEL
+        model = pulp.LpProblem("MNUC_Scheduler_Optimized", pulp.LpMinimize)
         
-        # 1. SETUP
+        # 2. SETUP VALID STARTS
         valid_starts = {}
         for idx, row in df_events.iterrows():
             eid = row['EventID']
@@ -79,22 +80,44 @@ if st.sidebar.button("Generate Schedule"):
                     for h in [t for t in hours_db if t + dur <= 17]:
                         valid_starts[eid].append((r, d, h))
         
-        # Variables
+        # VARIABLES
         x = pulp.LpVariable.dicts("x", ((e, r, d, h) for e in valid_starts for (r, d, h) in valid_starts[e]), cat='Binary')
         
-        # 2. CONSTRAINTS
+        # 3. OBJECTIVE FUNCTION: Integrate ML/PCA Cost Weights
+        def calculate_pca_cost(event_row, room, day, hour):
+            cost = 0
+            # Example mapping from the research report:
+            # High penalty for very early (07:00) or very late classes (simulating 'health' & 'convinience' costs)
+            if hour <= 8 or hour >= 15:
+                cost += 275  # 'health' weight
+                
+            # Preference for online classes where applicable to save 'financial' costs
+            if room == 'ONLINE':
+                cost -= 189  # 'financial' weight offset
+                
+            return cost
+
+        # Add Objective to Model
+        model += pulp.lpSum(
+            x[(e, r, d, h)] * calculate_pca_cost(df_events[df_events['EventID'] == e].iloc[0], r, d, h)
+            for e in valid_starts for (r, d, h) in valid_starts[e]
+        ), "Minimize_Total_Inconvenience"
+
+        # 4. HARD CONSTRAINTS
+        
         # C1: Assign Once
         for eid in df_events['EventID']:
             if eid in valid_starts:
                 model += pulp.lpSum(x[(eid, r, d, h)] for (r, d, h) in valid_starts[eid]) == 1
         
-        # C2: Room Capacity
+        # C2: Room Capacity & Overlap
         for r in rooms_db:
             if r == 'ONLINE': continue
             for d in days_db:
                 for t in hours_db:
                     active = []
-                    for eid, row in df_events.iterrows():
+                    for _, row in df_events.iterrows(): # Use '_' to ignore the integer index
+                        eid = row['EventID']            # Explicitly grab the string ID
                         if row['SessionType'] == 'Online': continue
                         dur = row['Duration']
                         if eid in valid_starts:
@@ -117,16 +140,34 @@ if st.sidebar.button("Generate Schedule"):
                                 if dv == d and (t - dur + 1 <= hv <= t):
                                     active.append(x[(eid, rv, dv, hv)])
                     if active: model += pulp.lpSum(active) <= 1
+                    
+        # C4: Student Group Overlap (Cohort isolation)
+        for group in df_events['Group'].unique():
+            group_events = df_events[df_events['Group'] == group]
+            for d in days_db:
+                for t in hours_db:
+                    active = []
+                    for _, row in group_events.iterrows():
+                        eid = row['EventID']
+                        dur = row['Duration']
+                        if eid in valid_starts:
+                            for (rv, dv, hv) in valid_starts[eid]:
+                                if dv == d and (t - dur + 1 <= hv <= t):
+                                    active.append(x[(eid, rv, dv, hv)])
+                    if active: model += pulp.lpSum(active) <= 1
 
-        # 3. SOLVE
-        if model.solve():
-            st.success("Optimization Complete")
+        # 5. SOLVE USING HiGHS
+        status = model.solve(pulp.HiGHS(msg=True))
+        
+        if pulp.LpStatus[status] == 'Optimal':
+            st.success("Optimization Complete (HiGHS Solver)")
             results = []
             base_dates = {'Mon':'2026-01-01', 'Tue':'2026-01-02', 'Wed':'2026-01-03', 'Thu':'2026-01-04', 'Fri':'2026-01-05'}
             
             for e in valid_starts:
                 for (r, d, h) in valid_starts[e]:
-                    if pulp.value(x[(e, r, d, h)]) == 1:
+                    # Using > 0.5 is safer for floating point binaries than == 1
+                    if pulp.value(x[(e, r, d, h)]) is not None and pulp.value(x[(e, r, d, h)]) > 0.5:
                         row = df_events[df_events['EventID'] == e].iloc[0]
                         start_time = f"{h:02d}:00"
                         end_time = f"{h+row['Duration']:02d}:00"
@@ -146,7 +187,7 @@ if st.sidebar.button("Generate Schedule"):
             df_res = pd.DataFrame(results)
             st.session_state['schedule_data'] = df_res
         else:
-            st.error("Infeasible. Constraints too tight.")
+            st.error("Infeasible. Constraints too tight. Could not find a mathematically valid schedule.")
 
 #  MAIN DASHBOARD 
 if 'schedule_data' in st.session_state:
@@ -170,7 +211,7 @@ if 'schedule_data' in st.session_state:
         with c_view:
             view_mode = st.selectbox("Group Rows By:", ["Room", "Lecturer", "Group"])
         with c_day:
-            day_filter = st.selectbox("Filter Day:", ["Mon", "Tue", "Wed", "Thu", "Fri"])
+            day_filter = st.selectbox("Filter Day:", ["All Days", "Mon", "Tue", "Wed", "Thu", "Fri"])
 
         # DATA FILTERING
         plot_df = df_out.copy()
@@ -194,12 +235,10 @@ if 'schedule_data' in st.session_state:
             color_discrete_sequence=px.colors.qualitative.Pastel
         )
         
-        # CLEAN LAYOUT (Updated to remove white background force)
+        # CLEAN LAYOUT
         fig.update_xaxes(tickformat="%H:%M", title="Time (07:00 - 17:00)", side="top")
         fig.update_yaxes(autorange="reversed", title=None)
         
-        # REMOVED: plot_bgcolor='white', showgrid=True settings
-        # This allows Plotly to inherit the Streamlit theme (Dark/Light)
         fig.update_layout(
             margin=dict(l=10, r=10, t=50, b=10),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
